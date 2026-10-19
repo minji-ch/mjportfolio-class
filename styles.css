@@ -556,3 +556,132 @@ html {
     transform: none;
   }
 }
+
+.project-card[role="button"] {
+  cursor: pointer;
+}
+
+.project-card[role="button"]:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 8px;
+}
+
+.project-modal[hidden] {
+  display: none;
+}
+
+.project-modal {
+  align-items: center;
+  background: rgba(4, 10, 12, .82);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 24px;
+  position: fixed;
+  z-index: 1000;
+}
+
+.project-modal__panel {
+  background: #111c20;
+  border: 1px solid #42606a;
+  box-shadow: 8px 8px 0 rgba(98, 244, 208, .2);
+  color: var(--paper);
+  max-height: min(780px, 85vh);
+  overflow-y: auto;
+  padding: clamp(24px, 5vw, 48px);
+  position: relative;
+  width: min(100%, 680px);
+}
+
+.project-modal__close {
+  align-items: center;
+  background: transparent;
+  border: 1px solid #42606a;
+  color: var(--lime);
+  cursor: pointer;
+  display: flex;
+  font-size: 28px;
+  height: 42px;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 42px;
+}
+
+.project-modal__panel > .eyebrow {
+  color: var(--lime);
+  margin-bottom: 12px;
+  padding-right: 48px;
+}
+
+.project-modal__notice {
+  color: #ffb468;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.project-modal__panel h2 {
+  color: var(--paper);
+  font-size: clamp(26px, 5vw, 38px);
+  letter-spacing: -.04em;
+  margin: 0 48px 16px 0;
+}
+
+.project-modal__description {
+  color: #b2c4c1;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.project-modal__details {
+  border-top: 1px solid #294047;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 24px;
+}
+
+.project-modal__details h3 {
+  color: #62f4d0;
+  font-family: "DM Sans", "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+
+.project-modal__details p {
+  color: #d1dedb;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.project-modal__achievement {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 500px) {
+  .project-modal {
+    padding: 14px;
+  }
+
+  .project-modal__panel {
+    max-height: 90vh;
+    padding: 58px 22px 26px;
+  }
+
+  .project-modal__close {
+    right: 14px;
+    top: 14px;
+  }
+
+  .project-modal__details {
+    gap: 18px;
+    grid-template-columns: 1fr;
+  }
+
+  .project-modal__achievement {
+    grid-column: auto;
+  }
+}

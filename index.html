@@ -71,7 +71,7 @@
         <h2>플레이를 바꾼<br /><span>월드와 시스템.</span></h2>
       </div>
       <div class="project-grid">
-        <article class="project-card project-card-large reveal">
+        <article class="project-card project-card-large reveal" data-project-id="mind-weather" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-modal" aria-expanded="false" aria-label="마음날씨 프로젝트 상세 정보 보기">
           <div class="project-visual visual-green">
             <span class="project-number">01</span>
             <div class="phone-mockup"><div class="phone-screen"><span>오늘의<br /><strong>마음 날씨</strong></span><i>☼</i></div></div>
@@ -79,10 +79,10 @@
           </div>
           <div class="project-info">
             <div><p class="project-type">MOBILE GAME · 2024</p><h3>마음날씨 // BUILD 01</h3></div>
-            <a href="#contact" class="round-arrow" aria-label="마음날씨 프로젝트 문의">↗</a>
+            <span class="round-arrow" aria-hidden="true">↗</span>
           </div>
         </article>
-        <article class="project-card reveal reveal-delay">
+        <article class="project-card reveal reveal-delay" data-project-id="flow-studio" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-modal" aria-expanded="false" aria-label="Flow Studio 프로젝트 상세 정보 보기">
           <div class="project-visual visual-lilac">
             <span class="project-number">02</span>
             <div class="dashboard-mockup"><div class="dashboard-top"></div><div class="dashboard-bars"><i></i><i></i><i></i></div><div class="dashboard-chart"></div></div>
@@ -90,10 +90,10 @@
           </div>
           <div class="project-info">
             <div><p class="project-type">SYSTEM DESIGN · 2023</p><h3>Flow Studio // BUILD 02</h3></div>
-            <a href="#contact" class="round-arrow" aria-label="Flow Studio 프로젝트 문의">↗</a>
+            <span class="round-arrow" aria-hidden="true">↗</span>
           </div>
         </article>
-        <article class="project-card reveal reveal-delay-more">
+        <article class="project-card reveal reveal-delay-more" data-project-id="origin-coffee" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-modal" aria-expanded="false" aria-label="Origin Coffee 프로젝트 상세 정보 보기">
           <div class="project-visual visual-orange">
             <span class="project-number">03</span>
             <div class="brand-mockup"><span>o</span><strong>Origin<br />coffee.</strong><small>slow down,<br />taste more.</small></div>
@@ -101,7 +101,7 @@
           </div>
           <div class="project-info">
             <div><p class="project-type">WORLD BUILDING · 2022</p><h3>Origin Coffee // BUILD 03</h3></div>
-            <a href="#contact" class="round-arrow" aria-label="Origin Coffee 프로젝트 문의">↗</a>
+            <span class="round-arrow" aria-hidden="true">↗</span>
           </div>
         </article>
       </div>
@@ -122,6 +122,30 @@
       </div>
     </section>
   </main>
+
+  <div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" aria-describedby="project-modal-description" hidden>
+    <div class="project-modal__panel">
+      <button class="project-modal__close" type="button" aria-label="프로젝트 상세 정보 닫기">×</button>
+      <p class="eyebrow">PROJECT DETAILS</p>
+      <p class="project-modal__notice">아래 내용은 실제 프로젝트 정보가 아닌 예시입니다.</p>
+      <h2 id="project-modal-title"></h2>
+      <p id="project-modal-description" class="project-modal__description"></p>
+      <div class="project-modal__details">
+        <section>
+          <h3>담당 역할</h3>
+          <p id="project-modal-role"></p>
+        </section>
+        <section>
+          <h3>사용 기술</h3>
+          <p id="project-modal-technologies"></p>
+        </section>
+        <section class="project-modal__achievement">
+          <h3>주요 성과</h3>
+          <p id="project-modal-achievement"></p>
+        </section>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <span>© <span id="current-year"></span> MINJI KANG</span>
